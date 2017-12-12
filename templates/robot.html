@@ -1,0 +1,184 @@
+<html>
+<head>
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}" ></script>
+<script src="{{ url_for('static', filename='js/tracking/build/tracking-min.js') }}" ></script>
+<script src="{{ url_for('static', filename='js/tracking/build/data/face.js') }}" ></script>
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1, maximum-scale=1">
+    <title>OWI Robot UH ECE 5397</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        .picture-container {
+            position: relative;
+            width: 600px;
+            height: auto;
+            margin: 20px auto;
+            border: 10px solid #fff;
+            box-shadow: 0 5px 5px #000;
+        }
+            .picture {
+                display: inline-block;
+                width: 100%;
+                height: auto;
+            }
+            
+     
+    </style>
+</head>
+<body>
+    <div class="picture-container">
+        <img id="picture"  class="picture" src="http://10.0.0.10:8081">
+			<img id="picture2"  class="picture" src="http://10.0.0.10:8082">
+    </div>
+
+<!--<img id="picture1" src="{{ url_for('static', filename='picture.jpg') }}">-->
+
+
+<!--<img src="http://10.0.0.10:8081" /> <!--Enter the IP Address of your Raspberry Pi-->
+<!--<div style="float:right">-->
+
+</div>
+<!--<div style=" height:400px; width:300px; float:bottom;">-->
+<center>
+<h1><span style="color:#ff0000;">OWI</span><span style="color:#ff0000"> Robot</span></h1>
+<h2><span style="color:#ff0000;">Aurash & Sam</h2><br>
+<center><a class="button-one"  href="/#" id="up" style="font-size:22px;text-decoration:none;">  UP &nbsp&nbsp</a>
+<a class="button-four" href="/#" id="left" style="font-size:22px;text-decoration:none;"> LEFT </a>
+<a class="button-three"  href="/#" id="right" style="font-size:22px; text-decoration:none;">RIGHT&nbsp&nbsp</a>
+<a class="button-five"  href="/#" id="open" style="font-size:22px; text-decoration:none;">GR OPEN &nbsp&nbsp</a>
+<a class="button-six"  href="/#" id="close" style="font-size:22px; text-decoration:none;">GR CLOSE&nbsp&nbsp</a>
+<a class="button-seven" href="/#" id="cup" style="font-size:22px;text-decoration:none;">  GR Up&nbsp&nbsp</a>
+<a class="button-eight" href="/#" id="cd" style="font-size:22px;text-decoration:none;">  GR Dwn&nbsp&nbsp</a>
+<a class="button-two" href="/#" id="down" style="font-size:22px;text-decoration:none;">  DOWN&nbsp&nbsp</a></center>
+
+</div>
+
+<script>
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+$( document ).ready(function(){
+    $("#down").on("touchstart", function() {
+     $.get('/down_side');
+     }).on('touchend', function() {
+     $.get('/stop');
+    });
+$("#cup").on("touchstart", function() {
+     $.get('/cup_side');
+     }).on('touchend', function() {
+     $.get('/stop');
+    });
+$("#cd").on("touchstart", function() {
+     $.get('/cd_side');
+     }).on('touchend', function() {
+     $.get('/stop');
+    });
+	$("#close").on("touchstart", function() {
+     $.get('/close_side');
+     }).on('touchend', function() {
+     $.get('/stop');
+    });
+	$("#open").on("touchstart", function() {
+     $.get('/open_side');
+     }).on('touchend', function() {
+     $.get('/stop');
+    });
+    $("#up").on("touchstart", function() {
+     $.get('/up_side');
+     }).on('touchend', function() {
+     $.get('/stop');
+    });
+    $("#left").on("touchstart", function() {
+     $.get('/left_side');
+     }).on('touchend', function() {
+     $.get('/stop');
+    });
+    $("#right").on("touchstart", function() {
+     $.get('/right_side');
+     }).on('touchend', function() {
+     $.get('/stop');
+    });
+});
+}
+else{
+$( document ).ready(function(){
+    $("#down").on("mousedown", function(e) {
+     $.get('/down_side');e.preventDefault();
+     }).on('mouseup', function(e) {
+     $.get('/stop');
+	 e.preventDefault();
+    });
+    $("#up").on("mousedown", function() {
+     $.get('/up_side');
+     }).on('mouseup', function() {
+     $.get('/stop');
+    });$("#close").on("mousedown", function() {
+     $.get('/close_side');
+     }).on('mouseup', function() {
+     $.get('/stop');
+    });
+    $("#cup").on("mousedown", function() {
+     $.get('/cup_side');
+     }).on('mouseup', function() {
+     $.get('/stop');
+    });
+    $("#cd").on("mousedown", function() {
+     $.get('/cd_side');
+     }).on('mouseup', function() {
+     $.get('/stop');
+    });
+	$("#open").on("mousedown", function() {
+     $.get('/open_side');
+     }).on('mouseup', function() {
+     $.get('/stop');
+    });
+    $("#left").on("mousedown", function() {
+     $.get('/left_side');
+     }).on('mouseup', function() {
+     $.get('/stop');
+    });
+    $("#right").on("mousedown", function() {
+     $.get('/right_side');
+     }).on('mouseup', function() {
+     $.get('/stop');
+    });
+});}
+ $( document ).ready(function () {
+			var img = new Image();
+			img.crossOrigin = "";
+			img.src = "http://10.0.0.10:8081";
+			var tracker = new tracking.ObjectTracker(['face']);
+			tracker.setStepSize(1.7);
+			tracking.track('img',tracker);
+			 tracker.on('track', function(event) {
+        event.data.forEach(function(rect) {
+          console.log(rect.x);		
+			console.log(rect.y);	
+        });
+      });
+
+            
+        
+    });
+</script>
+
+<style>
+#down {
+      -webkit-touch-callout: none;
+    }
+#up {
+      -webkit-touch-callout: none;
+    }
+#left {
+      -webkit-touch-callout: none;
+    }
+#right {
+      -webkit-touch-callout: none;
+    }
+#open {
+      -webkit-touch-callout: none;
+    }
+#close {
+      -webkit-touch-callout: none;
+    }
+</style>
+</body>
+</html>
