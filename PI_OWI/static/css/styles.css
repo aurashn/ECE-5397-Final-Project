@@ -10,9 +10,9 @@ a {
 }
 
 .button-one {
-    display: inline;
+    display: block;
     margin: 50px auto;
-    width: 160px;
+    width: 50px;
     text-transform: uppercase;
     padding: 20px;
     border: 3px solid #fff;
@@ -22,27 +22,12 @@ a {
     font: 0.8em Arial, sans-serif;
 }
     .button-one:hover {
-        background: rgba(255, 255, 255, 0.1);
-    }
-.button-two {
-    display: inline;
-    margin: 50px auto;
-    width: 160px;
-    text-transform: uppercase;
-    padding: 20px;
-    border: 3px solid #fff;
-    border-radius: 10px;
-    text-align: center;
-    color: #fff;
-    font: 0.8em Arial, sans-serif;
-}
-    .button-two:hover {
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 0,0, 0.4);
     }
 .button-three {
     display: inline;
-    margin: 50px auto;
-    width: 160px;
+    margin-right: 50px ;
+    width: 50px;
     text-transform: uppercase;
     padding: 20px;
     border: 3px solid #fff;
@@ -52,12 +37,12 @@ a {
     font: 0.8em Arial, sans-serif;
 }
     .button-three:hover {
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 0, 0, 0.4);
     }
 .button-four {
     display: inline;
     margin: 50px auto;
-    width: 160px;
+    width: 50px;
     text-transform: uppercase;
     padding: 20px;
     border: 3px solid #fff;
@@ -67,5 +52,81 @@ a {
     font: 0.8em Arial, sans-serif;
 }
     .button-four:hover {
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 0,0, 0.4);
     }
+.button-five {
+    display: inline;
+    margin: 50px auto ;
+    width: 50px;
+    text-transform: uppercase;
+    padding: 20px;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    font: 0.8em Arial, sans-serif;
+}
+    .button-five:hover {
+        background: rgba(255, 0, 0, 0.4);
+    }
+.button-six {
+    display: inline;
+    margin-right: 50px;
+    width:50px;
+    text-transform: uppercase;
+    padding: 20px;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    font: 0.8em Arial, sans-serif;
+}
+    .button-six:hover {
+        background: rgba(255, 0,0, 0.4);
+    }
+.button-seven {
+    display: inline;
+    margin: 50px auto ;
+    width: 50px;
+    text-transform: uppercase;
+    padding: 20px;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    font: 0.8em Arial, sans-serif;
+}
+    .button-seven:hover {
+        background: rgba(255, 0,0, 0.4);
+    }
+.button-eight {
+    display: inline;
+    margin: 50px auto;
+    width: 50px;
+    text-transform: uppercase;
+    padding: 20px;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    font: 0.8em Arial, sans-serif;
+}
+    .button-eight:hover {
+        background: rgba(255, 0,0, 0.4);
+    }
+.button-two {
+    display: block;
+    margin: 50px auto;
+    width: 50px;
+    text-transform: uppercase;
+    padding: 20px;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    font: 0.8em Arial, sans-serif;
+}
+    .button-two:hover {
+        background: rgba(255, 0,0, 0.4);
+    }
+
