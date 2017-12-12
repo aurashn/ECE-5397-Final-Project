@@ -27,6 +27,30 @@ def right_side():
    ser.write('r')
    return 'true'
 
+@app.route('/close_side')
+def close_side():
+   data1="close"
+   ser.write('c')
+   return 'true'
+
+@app.route('/cup_side')
+def cup_side():
+   data1="close"
+   ser.write('f')
+   return 'true'
+
+@app.route('/cd_side')
+def cd_side():
+   data1="close"
+   ser.write('a')
+   return 'true'
+
+@app.route('/open_side')
+def open_side():
+   data1="open"
+   ser.write('o')
+   return 'true'
+
 @app.route('/up_side')
 def up_side():
    data1="FORWARD"
