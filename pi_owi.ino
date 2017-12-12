@@ -1,5 +1,9 @@
 void setup() {
-  // put your setup code here, to run once:
+ // put your setup code here
+ // set baud rate to 9600
+ // set all pins
+ //pins for pwm for each motor
+ //pins for direction for each motor
 Serial.begin(9600);
 pinMode(2,OUTPUT);
 pinMode(30,OUTPUT);
