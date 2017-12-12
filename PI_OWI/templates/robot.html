@@ -31,14 +31,9 @@
 			<img id="picture2"  class="picture" src="http://10.0.0.10:8082">
     </div>
 
-<!--<img id="picture1" src="{{ url_for('static', filename='picture.jpg') }}">-->
 
-
-<!--<img src="http://10.0.0.10:8081" /> <!--Enter the IP Address of your Raspberry Pi-->
-<!--<div style="float:right">-->
 
 </div>
-<!--<div style=" height:400px; width:300px; float:bottom;">-->
 <center>
 <h1><span style="color:#ff0000;">OWI</span><span style="color:#ff0000"> Robot</span></h1>
 <h2><span style="color:#ff0000;">Aurash & Sam</h2><br>
@@ -50,49 +45,48 @@
 <a class="button-seven" href="/#" id="cup" style="font-size:22px;text-decoration:none;">  GR Up&nbsp&nbsp</a>
 <a class="button-eight" href="/#" id="cd" style="font-size:22px;text-decoration:none;">  GR Dwn&nbsp&nbsp</a>
 <a class="button-two" href="/#" id="down" style="font-size:22px;text-decoration:none;">  DOWN&nbsp&nbsp</a></center>
-
 </div>
 
 <script>
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 $( document ).ready(function(){
     $("#down").on("touchstart", function() {
-     $.get('/down_side');
+     $.get('/down');
      }).on('touchend', function() {
      $.get('/stop');
     });
-$("#cup").on("touchstart", function() {
-     $.get('/cup_side');
+	$("#cup").on("touchstart", function() {
+     $.get('/cup');
      }).on('touchend', function() {
      $.get('/stop');
     });
-$("#cd").on("touchstart", function() {
-     $.get('/cd_side');
+	$("#cd").on("touchstart", function() {
+     $.get('/cd');
      }).on('touchend', function() {
      $.get('/stop');
     });
 	$("#close").on("touchstart", function() {
-     $.get('/close_side');
+     $.get('/close');
      }).on('touchend', function() {
      $.get('/stop');
     });
 	$("#open").on("touchstart", function() {
-     $.get('/open_side');
+     $.get('/open');
      }).on('touchend', function() {
      $.get('/stop');
     });
     $("#up").on("touchstart", function() {
-     $.get('/up_side');
+     $.get('/up');
      }).on('touchend', function() {
      $.get('/stop');
     });
     $("#left").on("touchstart", function() {
-     $.get('/left_side');
+     $.get('/left');
      }).on('touchend', function() {
      $.get('/stop');
     });
     $("#right").on("touchstart", function() {
-     $.get('/right_side');
+     $.get('/right');
      }).on('touchend', function() {
      $.get('/stop');
     });
@@ -101,42 +95,42 @@ $("#cd").on("touchstart", function() {
 else{
 $( document ).ready(function(){
     $("#down").on("mousedown", function(e) {
-     $.get('/down_side');e.preventDefault();
+     $.get('/down');e.preventDefault();
      }).on('mouseup', function(e) {
      $.get('/stop');
 	 e.preventDefault();
     });
     $("#up").on("mousedown", function() {
-     $.get('/up_side');
+     $.get('/up');
      }).on('mouseup', function() {
      $.get('/stop');
     });$("#close").on("mousedown", function() {
-     $.get('/close_side');
+     $.get('/close');
      }).on('mouseup', function() {
      $.get('/stop');
     });
     $("#cup").on("mousedown", function() {
-     $.get('/cup_side');
+     $.get('/cup');
      }).on('mouseup', function() {
      $.get('/stop');
     });
     $("#cd").on("mousedown", function() {
-     $.get('/cd_side');
+     $.get('/cd');
      }).on('mouseup', function() {
      $.get('/stop');
     });
 	$("#open").on("mousedown", function() {
-     $.get('/open_side');
+     $.get('/open');
      }).on('mouseup', function() {
      $.get('/stop');
     });
     $("#left").on("mousedown", function() {
-     $.get('/left_side');
+     $.get('/left');
      }).on('mouseup', function() {
      $.get('/stop');
     });
     $("#right").on("mousedown", function() {
-     $.get('/right_side');
+     $.get('/right');
      }).on('mouseup', function() {
      $.get('/stop');
     });
@@ -177,6 +171,12 @@ $( document ).ready(function(){
       -webkit-touch-callout: none;
     }
 #close {
+      -webkit-touch-callout: none;
+    }
+#cup {
+      -webkit-touch-callout: none;
+    }
+#cd {
       -webkit-touch-callout: none;
     }
 </style>
