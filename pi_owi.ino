@@ -23,11 +23,11 @@ void loop() {
   if(Serial.available())
  {
   char in = Serial.read();
-  if(in=='l'){ //rotate right
+  if(in=='l'){ //rotate left
   digitalWrite(30,0);
   digitalWrite(2,1);
   }
-  if(in=='r'){  //rotate left
+  if(in=='r'){  //rotate right
   digitalWrite(30,1);
   digitalWrite(2,1);
   }
